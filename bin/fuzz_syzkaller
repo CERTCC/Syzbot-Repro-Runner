@@ -1,0 +1,3 @@
+#!/bin/bash
+
+$SYZKALLER_DIR/bin/syz-manager -config=./syzkaller.cfg

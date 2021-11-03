@@ -1,0 +1,13 @@
+#!/bin/bash
+
+echo "Waiting for a minute to ensure the VM has booted"
+sleep 60
+
+# copy over reproducers
+until scp -i $IMAGE/stretch.id_rsa -P 10021 $CRASHERS/bin/* root@localhost:/root; do
+    echo "VM not up yet"
+    echo "sleeping, then trying again..."
+    sleep 10
+done
+
+ssh -i $IMAGE/stretch.id_rsa -p 10021 root@localhost "./$BUG_ID"

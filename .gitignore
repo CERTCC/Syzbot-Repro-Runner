@@ -1,0 +1,12 @@
+bootstrap_img/*.img
+bootstrap_img/*.id_rsa
+bootstrap_img/*.id_rsa.pub
+bootstrap_img/chroot/*
+bootstrap_img/image.tar.gz
+
+.vscode/*
+
+*.pyc
+
+crashers/*.c
+meta/*
